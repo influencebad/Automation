@@ -1,9 +1,15 @@
 x = int(input("Сумма вклада: "))
 
+
 y = int(input("На сколько лет делается вклад? "))
 
+
+percent = 0.10
+
+
 def bank(x,y):
-    print("Сумма вклада по завершению срока: " + str(x * 10 * (y)/100 + x))
-
-
+    final_sum = (x * (1 + percent)  ** y)
+    print("Ваша конечная сумма: " + str(round(final_sum, 2)))
+    
+    
 bank(x,y)

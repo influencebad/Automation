@@ -1,5 +1,6 @@
 num = int(input("Введите порядковый номер месяца: "))
 
+
 def month_to_season(num):
 
     if (num == 12) or (num == 1) or (num == 2):
@@ -14,6 +15,5 @@ def month_to_season(num):
         print("Нет месяца с таким порядковым номером")
 
 
-month_to_season(num)  
-
+month_to_season(num)
     
