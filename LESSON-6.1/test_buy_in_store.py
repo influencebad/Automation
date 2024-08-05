@@ -1,11 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-
 driver = webdriver.Chrome()
 
 # Открыть страницу
 driver.get(" https://www.saucedemo.com/")
+driver.maximize_window()
 
 
 def test_buy_in_store():
@@ -37,5 +37,5 @@ def test_buy_in_store():
 
     # Сравнить сумму из корзины с ожидаемым результатом
     assert total == '58.29'
-    
+
     driver.quit()
