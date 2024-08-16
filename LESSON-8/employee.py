@@ -23,14 +23,14 @@ class Employee:
 # Добавить нового сотрудника
     def add_new_employee(self, body):
         headers = {'x-client-token': self.auth()}
-        response = requests.post(self.url + '/employee', headers=headers, json=body)
+        response = requests.post(self.url + '/employee/', headers=headers, json=body)
         return response
 
 # Получить сотрудника по id
     def get_new_employee(self, id):
         response = requests.get(self.url + '/employee/' + str(id))
         return response
-    
+
 # Изменить данные о новом сотруднике
     def change_new_employee(self, id, new_body):
         headers = {'x-client-token': self.auth()}
