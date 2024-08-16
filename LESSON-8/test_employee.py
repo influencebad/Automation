@@ -46,11 +46,11 @@ def test_change_new_employee():
     resp = employee.get_list_employee('?company=1444')
     new_employee = resp.json()[-1]['id']
     new_body = {
-        "lastName": "Васильев",
+        "lastName": "Васильева",
         "phone": "97654332",
         "isActive": True
     }
     response = employee.change_new_employee(new_employee, new_body)
     assert response.status_code == 200
     resp = employee.get_new_employee(new_employee)
-    assert resp.json()['lastName'] == 'Васильев'
+    assert resp.json()['lastName'] == 'Васильева'
